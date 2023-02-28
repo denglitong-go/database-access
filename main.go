@@ -1,3 +1,5 @@
+// Package main
+// GO SQL database drivers https://github.com/golang/go/wiki/SQLDrivers
 package main
 
 import (
@@ -6,7 +8,8 @@ import (
 	"log"
 )
 
-func showBasicDB() {
+// showBasicCRUD show Create, Read, Update and Delete database operations.
+func showBasicCRUD() {
 	basic.OpenDB()
 	defer basic.CloseDB()
 	basic.PingDB()
@@ -47,5 +50,5 @@ func showBasicDB() {
 // main
 // DB_USER=root DB_PASSWORD=12345678 go run .
 func main() {
-	showBasicDB()
+	showBasicCRUD()
 }
